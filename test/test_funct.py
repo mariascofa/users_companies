@@ -36,7 +36,7 @@ class TestFunctions(TestCase):
                 "industry": "Finance",
             },
         ]
-        app_res = load_json("src/test/data/company.json")
+        app_res = load_json("test/data/company.json")
         self.assertEqual(exp_result, app_res)
 
     def test_check_age_condition_false(self):
@@ -132,7 +132,7 @@ class TestFunctions(TestCase):
                 },
             },
         ]
-        with open("src/test/data/company.json", "r") as file:
+        with open("test/data/company.json", "r") as file:
             json_string = file.read()
             company_data = json.loads(json_string)
 
@@ -166,7 +166,7 @@ class TestFunctions(TestCase):
                 },
             },
         ]
-        with open("src/test/data/company.json", "r") as file:
+        with open("test/data/company.json", "r") as file:
             json_string = file.read()
             company_data = json.loads(json_string)
 
@@ -200,7 +200,7 @@ class TestFunctions(TestCase):
                 },
             },
         ]
-        with open("src/test/data/company.json", "r") as file:
+        with open("test/data/company.json", "r") as file:
             json_string = file.read()
             company_data = json.loads(json_string)
 
@@ -231,7 +231,7 @@ class TestFunctions(TestCase):
                 "industry": "Finance",
             },
         ]
-        json_path = "src/test/data/temp_test_file.json"
+        json_path = "test/data/temp_test_file.json"
         try:
             save_data_to_json(json_path, data_to_save)
             self.assertTrue(os.path.exists(json_path))
