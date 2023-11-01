@@ -46,7 +46,7 @@ def add_fullname_to_users(user_data_set: list) -> list:
     :return: The updated user data set with "full_name" field.
     """
     return [
-        {**user, "full_name": f"{user['forename']} {user['forename']}"}
+        {**user, "full_name": f"{user['forename']} {user['surname']}"}
         for user in user_data_set
     ]
 

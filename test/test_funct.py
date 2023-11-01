@@ -74,7 +74,7 @@ class TestFunctions(TestCase):
         result = add_fullname_to_users(user_data_set=inputs)
 
         for item_index in range(len(outputs)):
-            for key, value in result[item_index].items():
+            for key, value in outputs[item_index].items():
                 self.assertEqual(result[item_index][key], value)
 
     def test_filter_users_by_age(self):
