@@ -127,9 +127,6 @@ processor = DataProcessor(
     company_json_path="assets/company.json",
 )
 
-selected_age = 30
-condition = "Less than"
-
 users_with_companies = processor.associate_users_with_companies()
 
 # You can save the filtered data to a JSON file using the save_data_to_json function. 
